@@ -1,0 +1,142 @@
+.container {
+  margin: 50px;
+  width: 500px;
+}
+
+.pb-emoji {
+  position: relative;
+  animation: hide-underline 2s infinite;
+  overflow: hidden;
+}
+
+.pb-emoji-top-right:after {
+  animation: pop-in-top-right 2s infinite;
+}
+
+.pb-emoji-top-left:after {
+  animation: pop-in-top-left 2s infinite;
+}
+
+.pb-emoji-top-left:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;  
+  transition: all 0.3s ease-in-out 0s;
+  animation: show-underline 2s infinite;
+}
+
+.pb-emoji-top-right:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;  
+  transition: all 0.3s ease-in-out 0s;
+  animation: show-underline 2s infinite;
+}
+
+/* animations*/
+@keyframes show-underline {
+  0%   {visibility: hidden; transform: scaleX(0);}
+  50%, 60%  {visibility: visible; transform: scaleX(1);}  
+  80% {visibility: hidden; transform: scaleX(0);}  
+  100% {visibility: hidden; transform: scaleX(0);}  
+}
+
+@keyframes pop-in-top-left {
+  0%   { transform: translateY(10px) rotate(90deg) scale(.3); opacity:  0;}
+  50%, 65% { transform: translateY(-30px) rotate(0deg) scale(1); opacity: 1;}  
+  70% { transform: scale(.1); opacity: .1 }
+  100% { transform: translateY(10px) rotate(-90deg); opacity: 0;}
+}
+
+@keyframes pop-in-top-right {
+  0%   { transform: translateY(10px) rotate(-90deg) scale(.3); opacity:  0;}
+  50%, 65% { transform: translateY(-30px) rotate(0deg) scale(1); opacity: 1;}  
+  70% { transform: scale(.1); opacity: .1 }
+  100% { transform: translateY(10px) rotate(90deg); opacity: 0;}
+}
+
+/* emoji list */
+.smile:after {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  left: 0;
+  background: url("//res-format-story.playbuzz.com/emojis-3.1/64x64_png/1f601.png") no-repeat;
+  background-size: 32px;
+  width: 32px;
+  height: 32px;      
+}
+
+.poop:after { 
+  opacity: 0;
+  content: "";
+  position: absolute;
+  left: 5px;
+  background: url("//res-format-story.playbuzz.com/emojis-3.1/64x64_png/1f4a9.png") no-repeat;
+  background-size: 32px;
+  width: 32px;
+  height: 32px; 
+}
+
+.robot:after { 
+  opacity: 0;
+  content: "";
+  position: absolute;
+  left: 5px;
+  background: url("//res-format-story.playbuzz.com/emojis-3.1/64x64_png/1f916.png") no-repeat;
+  background-size: 32px;
+  width: 32px;
+  height: 32px; 
+}
+
+.pray:after { 
+  opacity: 0;
+  content: "";
+  position: absolute;
+  left: 5px;
+  background: url("//res-format-story.playbuzz.com/emojis-3.1/64x64_png/1f64f.png") no-repeat;
+  background-size: 32px;
+  width: 32px;
+  height: 32px; 
+}
+
+.like:after { 
+  opacity: 0;
+  content: "";
+  position: absolute;
+  left: 18px;
+  background: url("//res-format-story.playbuzz.com/emojis-3.1/64x64_png/1f44d.png") no-repeat;
+  background-size: 32px;
+  width: 32px;
+  height: 32px; 
+}
+
+.israel:after {  
+  opacity: 0;
+  content: "";
+  position: absolute;
+  left: 5px;
+  background: url("//res-format-story.playbuzz.com/emojis-3.1/64x64_png/1f1ee-1f1f1.png") no-repeat;
+  background-size: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+.palestinian:after {  
+  opacity: 0;
+  content: "";
+  position: absolute;
+  left: 22px;
+  background: url(//res-format-story.playbuzz.com/emojis-3.1/64x64_png/1f1f5-1f1f8.png) no-repeat;
+  background-size: 32px;
+  width: 32px;
+  height: 32px;
+}
